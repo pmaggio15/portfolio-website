@@ -358,6 +358,7 @@ nav {
     grid-template-columns: 1fr 1px 1.5fr;
     gap: 5rem;
     align-items: start;
+    justify-items: center;
 }
 
 .contact-divider {
@@ -369,6 +370,8 @@ nav {
 
 .contact-info {
     padding-top: 2rem;
+    width: 100%;
+    max-width: 300px;
 }
 
 .contact-info .info-item {
@@ -379,13 +382,13 @@ nav {
     font-size: 0.75rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
-    color: #888;
+    color: #2a2a2a;
     margin-bottom: 0.8rem;
     font-weight: 400;
 }
 
 .info-item p {
-    color: #999;
+    color: #444;
     line-height: 1.8;
     font-size: 0.95rem;
 }
@@ -396,7 +399,7 @@ nav {
 }
 
 .social-icons a {
-    color: #666;
+    color: #444;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s;
@@ -408,6 +411,86 @@ nav {
 
 .contact-form {
     padding-top: 2rem;
+}
+
+.education-box {
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.education-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-divider {
+    border: none;
+    border-top: 1px solid #d0d0d0;
+    margin: 1.5rem 0;
+}
+
+.education-item {
+    margin-bottom: 3rem;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-item h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+}
+
+.education-item .degree {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.education-item .date {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+}
+
+.education-item .details {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+.education-item .coursework,
+.education-item .certifications {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+}
+
+.education-item .coursework li,
+.education-item .certifications li {
+    font-size: 1rem;
+    color: #444;
+    padding: 0.4rem 0;
+    border-bottom: none;
+    line-height: 1.3;
+}
+
+.education-item .certifications {
+    grid-template-columns: 1fr;
 }
 
 .form-group {
@@ -584,6 +667,15 @@ footer {
     .skill-columns {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    .education-item .coursework {
+        grid-template-columns: 1fr;
+    }
+
+    .education-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .footer-content {

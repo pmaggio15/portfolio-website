@@ -15,7 +15,7 @@
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">CONTACT</a></li>
             <li><a href="#listings">LINKEDIN</a></li>
-            <li><a href="#services">GETHUB</a></li>
+            <li><a href="#services">GITHUB</a></li>
             <li><a href="#blog">RESUME</a></li>
         </ul>
         <button class="contact-btn">CONTACT</button>
@@ -25,7 +25,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Design. Code. Create.</h1>
-            <p class="hero-subtitle">A Partnership You Can Trust</p>
+            <p class="hero-subtitle">Frontend Developer | React • TypeScript • Modern Web</p>
             <p>Detail-oriented developer with experience across frontend and full-stack work. Strong in React, TypeScript, and Firebase, with a track record of building efficient, user-friendly applications.</p>
             <button class="contact-btn">CONTACT</button>
         </div>
@@ -37,7 +37,7 @@
         <button class="tab">SKINSTRIC</button>
         <button class="tab">STAYMORI</button>
         <button class="tab">NEURAFLOW</button>
-        <button class="tab">THE NOOK</button>
+        <button class="tab">NETFLIX CLONE</button>
     </div>
 
     <!-- Services Section -->
@@ -46,7 +46,7 @@
             <div class="service-image"></div>
             <div class="service-content">
                 <div class="service-label">VALUE PROPOSITION</div>
-                <h2>Buying a Home</h2>
+                <h2>SKINSTRIC AI</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat neque lorem, in posuere consequat orci. Integer eget ultricies gravida aliquam sit ultrices.</p>
                 <h3>What's Included</h3>
                 <ul>
@@ -61,7 +61,7 @@
             <div class="service-image"></div>
             <div class="service-content">
                 <div class="service-label">STEP BY STEP TRANSITION</div>
-                <h2>Selling a Home</h2>
+                <h2>STAYMORI</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Dignissimos voluptas ipsam. Praesent consectetur orci ut ligure et eiusmod posuere consenter ultrices gravida consectetur.</p>
                 <h3>What's Included</h3>
                 <ul>
@@ -76,7 +76,7 @@
             <div class="service-image"></div>
             <div class="service-content">
                 <div class="service-label">VALUE PROPOSITION</div>
-                <h2>Renting a Home</h2>
+                <h2>NEURAFLOW</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat neque lorem, in posuere consequat orci. Integer eget ultricies gravida aliquam sit ultrices.</p>
                 <h3>What's Included</h3>
                 <ul>
@@ -90,7 +90,7 @@
             <div class="service-image"></div>
             <div class="service-content">
                 <div class="service-label">VALUE PROPOSITION</div>
-                <h2>Buying a Home</h2>
+                <h2>NETFLIX CLONE</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat neque lorem, in posuere consequat orci. Integer eget ultricies gravida aliquam sit ultrices.</p>
                 <h3>What's Included</h3>
                 <ul>
@@ -161,20 +161,20 @@
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="contact-header">
-            <h2>Let’s explore opportunities <br />to work together.</h2>
+            <h2>Let’s explore opportunities <br />to work together</h2>
         </div>
         <div class="contact-content">
             <div class="contact-info">
                 <div class="info-item">
-                    <h3>EMAIL</h3>
+                    <h3>EMAIL:</h3>
                     <p>pmaggio15@gmail.com</p>
                 </div>
                 <div class="info-item">
-                    <h3>PHONE</h3>
+                    <h3>PHONE:</h3>
                     <p>(253) 294-4205</p>
                 </div>
                 <div class="info-item">
-                    <h3>SOCIAL</h3>
+                    <h3>SOCIAL:</h3>
                     <div class="social-icons">
                         <a href="https://github.com/pmaggio15" target="_blank">
                             <i class="fab fa-github"></i>
@@ -189,6 +189,7 @@
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
+                    <hr class="education-divider">
                     <p class="animated-tagline">Crafting Scalable Frontend Experiences!</p>
                 </div>
             </div>
@@ -201,8 +202,8 @@
                         <p class="date">August 2013 - May 2017</p>
                     </div>
                     <div class="education-item">
-                        <h3>Frontend Simplified</h3>
-                        <p class="degree">Frontend Developer</p>
+                        <h3>FES Institute</h3>
+                        <p class="degree">Completion of Frontend Development Bootcamp</p>
                         <p class="date">April 2025 - November 2025</p>
                     </div>
                 </div>
@@ -222,8 +223,9 @@
                 <div class="education-item">
                     <h3>Certifications</h3>
                     <ul class="certifications">
-                        <li>AWS Certified Developer</li>
-                        <li>React Professional Certificate</li>
+                        <p>Frontend Development Certificate — FES Institute</p>
+                        <p>Intensive training in HTML, CSS, JavaScript, React, TypeScript, Next.js, and modern frontend technologies, including a professional internship.</p>
+                        
                     </ul>
                 </div>
                 <hr class="education-divider">
@@ -259,5 +261,26 @@
             <p>&copy; 2025 Paige Maggio | Software Engineer</p>
         </div>
     </footer>
+    <script>
+        // Scroll animation for typing effect
+        const tagline = document.querySelector('.animated-tagline');
+        
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('typing')) {
+                    entry.target.classList.add('typing');
+                }
+            });
+        }, observerOptions);
+        
+        if (tagline) {
+            observer.observe(tagline);
+        }
+    </script>
 </body>
 </html>

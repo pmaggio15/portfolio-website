@@ -383,7 +383,7 @@ nav {
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     color: #2a2a2a;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
     font-weight: 400;
 }
 
@@ -415,11 +415,15 @@ nav {
     font-style: italic;
     margin-top: 1.5rem;
     overflow: hidden;
-    border-right: 2px solid #8b7355;
+    border-right: 2px solid transparent;
     white-space: nowrap;
     width: 0;
-    animation: typing 3.5s steps(40) 1s 1 normal forwards,
-               blink 0.75s step-end 5s;
+}
+
+.animated-tagline.typing {
+    animation: typing 3.5s steps(40) 0.3s 1 normal forwards,
+               blink 0.75s step-end 0s 5,
+               removeCursor 0.1s 4.5s forwards;
 }
 
 @keyframes typing {
@@ -428,8 +432,11 @@ nav {
 }
 
 @keyframes blink {
-    50% { border-color: transparent }
-    100% { border-color: transparent }
+    50% { border-right-color: #8b7355 }
+}
+
+@keyframes removeCursor {
+    to { border-right-color: transparent }
 }
 
 .contact-form {

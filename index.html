@@ -13,12 +13,12 @@
         <div class="logo">| PAIGE MAGGIO |</div>
         <ul class="nav-links">
             <li><a href="#home">HOME</a></li>
-            <li><a href="#about">CONTACT</a></li>
-            <li><a href="#listings">LINKEDIN</a></li>
-            <li><a href="#services">GITHUB</a></li>
-            <li><a href="#blog">RESUME</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="https://linkedin.com/in/paigemaggio" target="_blank">LINKEDIN</a></li>
+            <li><a href="https://github.com/pmaggio15" target="_blank">GITHUB</a></li>
+            <li><a href="resume.pdf" target="_blank">RESUME</a></li>
         </ul>
-        <button class="contact-btn">CONTACT</button>
+        <button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACT</button>
     </nav>
 
     <!-- Hero Section -->
@@ -27,14 +27,14 @@
             <h1>Design. Code. Create.</h1>
             <p class="hero-subtitle">Frontend Developer | React • TypeScript • Modern Web</p>
             <p>Detail-oriented developer with experience across frontend and full-stack work. Strong in React, TypeScript, and Firebase, with a track record of building efficient, user-friendly applications.</p>
-            <button class="contact-btn">CONTACT</button>
+            <button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACT</button>
         </div>
     </section>
 
     <!-- Category Tabs -->
     <div class="category-tabs">
         <button class="tab">PROJECT EXPERIENCE</button>
-        <button class="tab">SKINSTRIC</button>
+        <button class="tab" onclick="window.open('https://skinstric-red.vercel.app/', '_blank')">SKINSTRIC</button>
         <button class="tab">STAYMORI</button>
         <button class="tab">NEURAFLOW</button>
         <button class="tab">NETFLIX CLONE</button>
@@ -42,21 +42,23 @@
 
     <!-- Services Section -->
     <section class="services">
-        <div class="service-card">
-            <div class="service-image"></div>
-            <div class="service-content">
-                <div class="service-label">CHANGING SKINCARE</div>
-                <h2>SKINSTRIC AI</h2>
-                <p>Frontend / AI Engineering Intern at Skinstric AI on a real-time skincare analysis platform built with Next.js and the OpenAI Vision API, achieving 98% detection accuracy. Built a responsive, animation-driven UI with Tailwind CSS and GSAP, boosting engagement by 60% and retention by 40%, while optimizing performance to sub-2-second analysis times.</p>
-                <h3>What's Included</h3>
-                <ul>
-                    <li>Built a real-time AI skincare analysis platform using Next.js and OpenAI Vision API, achieving 98% detection accuracy.</li>
-                    <li>Developed a responsive React UI with Tailwind CSS and GSAP, increasing user engagement by 60%.</li>
-                    <li>Optimized performance with Next.js Server Components, delivering sub-2-second skin detection results.</li>
-                    <li>Designed a modular component system enabling rapid A/B testing of recommendation experiences.</li>
-                </ul>
+        <a href="https://skinstric-red.vercel.app/" target="_blank" class="service-card-link">
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('assets/skinstric.jpeg');"></div>
+                <div class="service-content">
+                    <div class="service-label">CHANGING SKINCARE</div>
+                    <h2>SKINSTRIC AI</h2>
+                    <p>Frontend / AI Engineering Intern at Skinstric AI on a real-time skincare analysis platform built with Next.js and the OpenAI Vision API, achieving 98% detection accuracy. Built a responsive, animation-driven UI with Tailwind CSS and GSAP, boosting engagement by 60% and retention by 40%, while optimizing performance to sub-2-second analysis times.</p>
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Built a real-time AI skincare analysis platform using Next.js and OpenAI Vision API, achieving 98% detection accuracy.</li>
+                        <li>Developed a responsive React UI with Tailwind CSS and GSAP, increasing user engagement by 60%.</li>
+                        <li>Optimized performance with Next.js Server Components, delivering sub-2-second skin detection results.</li>
+                        <li>Designed a modular component system enabling rapid A/B testing of recommendation experiences.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </a>
 
         <div class="service-card">
             <div class="service-image"></div>
@@ -87,6 +89,7 @@
                 </ul>
             </div>
         </div>
+        
         <div class="service-card">
             <div class="service-image"></div>
             <div class="service-content">
@@ -160,15 +163,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-header">
-            <h2>Let’s explore opportunities <br />to work together</h2>
+            <h2>Let's explore opportunities <br />to work together</h2>
         </div>
         <div class="contact-content">
             <div class="contact-info">
                 <div class="info-item">
                     <h3>EMAIL:</h3>
-                    <p>pmaggio15@gmail.com</p>
+                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e89885898f8f8187d9dda88f85898184c68b8785">[email&#160;protected]</a></p>
                 </div>
                 <div class="info-item">
                     <h3>PHONE:</h3>
@@ -186,7 +189,7 @@
                         <a href="resume.pdf" target="_blank">
                             <i class="fa-solid fa-file"></i>
                         </a>
-                        <a href="mailto:pmaggio15@gmail.com">
+                        <a href="/cdn-cgi/l/email-protection#9aeaf7fbfdfdf3f5abafdafdf7fbf3f6b4f9f5f7">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
@@ -226,18 +229,16 @@
                     <ul class="certifications">
                         <p>Frontend Development Certificate — FES Institute</p>
                         <p>Intensive training in HTML, CSS, JavaScript, React, TypeScript, Next.js, and modern frontend technologies, including a professional internship.</p>
-                        
                     </ul>
                 </div>
                 <hr class="education-divider">
                 <div class="education-item">
-                        <h3>HOBBIES</h3>
-                        <p class="degree">Former Division I women’s soccer player with semi-professional experience at FC Tucson.</p>
-                        <br />
-                        <p class="degree">Passionate about snowboarding and interior decorating.</p>
-                    </div>
+                    <h3>HOBBIES</h3>
+                    <p class="degree">Former Division I women's soccer player with semi-professional experience at FC Tucson.</p>
+                    <br />
+                    <p class="degree">Passionate about snowboarding and interior decorating.</p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -251,9 +252,9 @@
             <div class="footer-right">
                 <h3>Connect</h3>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/paigemaggio" >LinkedIn</a>
-                    <a href="https://github.com/pmaggio15" >GitHub</a>
-                    <a href="mailto:pmaggio15@gmail.com">Email</a>
+                    <a href="https://linkedin.com/in/paigemaggio" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/pmaggio15" target="_blank">GitHub</a>
+                    <a href="/cdn-cgi/l/email-protection#76061b1711111f19474336111b171f1a5815191b">Email</a>
                     <a href="resume.pdf" target="_blank">Resume</a>
                 </div>
             </div>
@@ -262,6 +263,7 @@
             <p>&copy; 2025 Paige Maggio | Software Engineer</p>
         </div>
     </footer>
+    
     <script>
         // Scroll animation for typing effect
         const tagline = document.querySelector('.animated-tagline');

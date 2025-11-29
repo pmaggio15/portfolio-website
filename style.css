@@ -163,16 +163,17 @@ nav {
 
 .service-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     gap: 0;
     margin-bottom: 3rem;
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    min-height: 400px;
+    min-height: auto;
 }
 
 .service-card:nth-child(even) {
-    direction: rtl;
+    direction: ltr;
 }
 
 .service-card:nth-child(even) > * {
@@ -180,39 +181,30 @@ nav {
 }
 
 .service-image {
-    background: linear-gradient(rgba(139,115,85,0.1), rgba(139,115,85,0.1)),
-                #d4c4b0;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), #d4c4b0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 4rem; 
 }
 
-/* Override background for cards with images */
-.service-card a[style*="background-image"] .service-image,
-.service-image[style*="background-image"] {
-    background-blend-mode: normal;
-}
-
-.service-image[style*="background-image"]::before {
-    display: none;
-}
-
-.service-image::before {
-    content: '';
-    position: absolute;
+.service-img {
     width: 100%;
+    max-width: 900px;
     height: 100%;
-    background: linear-gradient(135deg, transparent 40%, rgba(139,115,85,0.2));
+    object-fit: contain;
+    object-position: center center;
+    border: 5px solid black;
+    padding: 1rem;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.8s ease;
 }
-
-/* Remove overlay for images */
-.service-image[style*="background-image"]::before {
-    display: none;
+.service-img:hover {
+    transform: scale(1.15); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
 }
 
 .service-content {
@@ -226,20 +218,16 @@ nav {
 .service-label {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 60%; 
     transform: translateY(-50%) rotate(90deg);
     transform-origin: right center;
-    font-size: 0.75rem;
-    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
     color: #8b7355;
     text-transform: uppercase;
 }
-
 .service-card:nth-child(even) .service-label {
-    right: auto;
-    left: 0;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: left center;
+    transform: none;
 }
 
 .service-content h2 {
@@ -750,17 +738,4 @@ footer {
 
 .service-card-link .service-card {
     cursor: pointer;
-}
-
-/* Skinstric Background Image */
-.skinstric-bg {
-    background-image: url('https://skinstric-red.vercel.app/og-image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Fallback: If screenshot doesn't load, show gradient */
-.service-image:not(.skinstric-bg) {
-    background: linear-gradient(rgba(139,115,85,0.1), rgba(139,115,85,0.1)), #d4c4b0;
 }

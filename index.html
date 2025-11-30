@@ -8,30 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo">| PAIGE MAGGIO |</div>
         <ul class="nav-links">
             <li><a href="#home">HOME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="mailto:pmaggio15@gmail.com">CONTACT</a></li>
             <li><a href="https://linkedin.com/in/paigemaggio" target="_blank">LINKEDIN</a></li>
             <li><a href="https://github.com/pmaggio15" target="_blank">GITHUB</a></li>
             <li><a href="resume.pdf" target="_blank">RESUME</a></li>
         </ul>
-        <button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACT</button>
+        <button class="contact-btn" onclick="window.location.href='mailto:pmaggio15@gmail.com'">CONTACT</button>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Design. Code. Create.</h1>
             <p class="hero-subtitle">Frontend Developer | React • TypeScript • Modern Web</p>
             <p>Detail-oriented developer with experience across frontend and full-stack work. Strong in React, TypeScript, and Firebase, with a track record of building efficient, user-friendly applications.</p>
-            <button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACT</button>
+            <button class="contact-btn" onclick="window.location.href='mailto:pmaggio15@gmail.com'">CONTACT</button>
         </div>
     </section>
+     <button class="contact-btn sticky-contact" onclick="window.location.href='mailto:pmaggio15@gmail.com'">CONTACT</button>
 
-    <!-- Category Tabs -->
     <div class="category-tabs">
         <button class="tab">PROJECT EXPERIENCE</button>
         <button class="tab" onclick="window.open('https://skinstric-red.vercel.app/', '_blank')">SKINSTRIC AI</button>
@@ -40,7 +38,6 @@
         <button class="tab" onclick="window.open('https://netflix-clone-henna-nine-93.vercel.app/', '_blank')">NETFLIX CLONE</button>
     </div>
 
-    <!-- Services Section -->
     <section class="services">
         <a href="https://skinstric-red.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
@@ -123,7 +120,6 @@
         </a>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <h2>Technical Skills</h2>
         <div class="skills-container">
@@ -179,7 +175,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="contact-header">
             <h2>Let's explore opportunities <br />to work together</h2>
@@ -259,7 +254,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -267,13 +262,18 @@
                 <p>Frontend Developer focused on building clean, scalable, and user-focused web applications, actively seeking frontend and full-stack opportunities.</p>
             </div>
             <div class="footer-right">
-                <h3>Connect</h3>
+                <h3>CONNECT HERE</h3>
                 <div class="social-links">
                     <a href="https://linkedin.com/in/paigemaggio" target="_blank">LinkedIn</a>
                     <a href="https://github.com/pmaggio15" target="_blank">GitHub</a>
-                    <a href="mailto:pmaggio15@gmail.com">Email</a>
+                    <a href="mailto:pmaggio15@gmail.com">Contact</a>
                     <a href="resume.pdf" target="_blank">Resume</a>
                 </div>
+                <div class="scroll-top-container">
+                <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -281,31 +281,92 @@
         </div>
     </footer>
     
-    <script>
-    // Scroll animation for typing effect
-    const tagline = document.querySelector('.animated-tagline');
-    
-    const observerOptions = {
-        threshold: 0.5,
-        rootMargin: '0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                tagline.classList.remove('typing');
-                void tagline.offsetWidth;
-                tagline.classList.add('typing');
+  <script>
+        const tagline = document.querySelector('.animated-tagline');
+        
+        const observerOptions = {
+            threshold: 0.7,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tagline.classList.remove('typing');
+                    void tagline.offsetWidth;
+                    tagline.classList.add('typing');
+                } else {
+                    tagline.classList.remove('typing');
+                }
+            });
+        }, observerOptions);
+        
+        if (tagline) {
+            observer.observe(tagline);
+        }
+
+        const stickyButton = document.querySelector('.sticky-contact');
+        const heroSection = document.querySelector('.hero');
+        const contactSection = document.querySelector('.contact-section');
+        
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const contactTop = contactSection.offsetTop;
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > heroBottom && scrollPosition < contactTop) {
+                stickyButton.classList.add('show');
             } else {
-                
-                tagline.classList.remove('typing');
+                stickyButton.classList.remove('show');
             }
         });
-    }, observerOptions);
-    
-    if (tagline) {
-        observer.observe(tagline);
-    }
-</script>
+
+      
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        const serviceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const h2 = entry.target.querySelector('.service-content h2');
+                    const p = entry.target.querySelector('.service-content p');
+                    const h3 = entry.target.querySelector('.service-content h3');
+                    const ul = entry.target.querySelector('.service-content ul');
+                    
+                    setTimeout(() => {
+                        if (h2) h2.classList.add('animate-in');
+                        if (p) p.classList.add('animate-in');
+                        if (h3) h3.classList.add('animate-in');
+                        if (ul) ul.classList.add('animate-in');
+                    }, 100);
+                }
+            });
+        }, {
+            threshold: 0.7,
+            rootMargin: '0px'
+        });
+
+        serviceCards.forEach(card => {
+            serviceObserver.observe(card);
+        });
+
+       
+        const ctaSection = document.querySelector('.cta-section');
+        const footer = document.querySelector('footer');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px'
+        });
+
+        if (ctaSection) sectionObserver.observe(ctaSection);
+        if (contactSection) sectionObserver.observe(contactSection);
+        if (footer) sectionObserver.observe(footer);
+    </script>
 </body>
 </html>

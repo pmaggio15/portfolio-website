@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Modern Page Load Animations */
 nav {
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,18 @@ nav {
     padding: 2rem 5%;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -26,12 +38,34 @@ nav {
     font-weight: 300;
     letter-spacing: 0.3rem;
     color: #8b7355;
+    animation: fadeIn 1s ease-out 0.3s both;
 }
 
 .nav-links {
     display: flex;
     gap: 3rem;
     list-style: none;
+}
+
+.nav-links li {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.4s; }
+.nav-links li:nth-child(2) { animation-delay: 0.5s; }
+.nav-links li:nth-child(3) { animation-delay: 0.6s; }
+.nav-links li:nth-child(4) { animation-delay: 0.7s; }
+.nav-links li:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .nav-links a {
@@ -56,11 +90,21 @@ nav {
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s;
+    animation: fadeIn 0.8s ease-out 0.9s both;
 }
 
 .contact-btn:hover {
     background: #8b7355;
     color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Hero Section */
@@ -74,6 +118,18 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: zoomIn 1.2s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .hero-content {
@@ -89,6 +145,18 @@ nav {
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
+    animation: fadeInScale 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInScale {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .hero-subtitle {
@@ -96,6 +164,7 @@ nav {
     letter-spacing: 0.15rem;
     margin-bottom: 2rem;
     color: #666;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
 .hero p {
@@ -103,6 +172,20 @@ nav {
     margin-bottom: 2rem;
     line-height: 1.8;
     color: #555;
+    animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+.hero .contact-btn {
+    animation: fadeInUp 0.8s ease-out 1.2s both, pulse 2s ease-in-out 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .cta-button {
@@ -121,6 +204,175 @@ nav {
     background: #8b7355;
     color: white;
 }
+/* CTA Section Scroll Animations */
+.cta-section {
+    text-align: center;
+    padding: 5rem 5%;
+    background: white;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cta-section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.cta-section.animate-in h2 {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+
+.skill-category {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.cta-section.animate-in .skill-category:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.cta-section.animate-in .skill-category:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.cta-section.animate-in .skill-category:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+/* Contact Section Scroll Animations */
+.contact-section {
+    padding: 5rem 5%;
+    background: #e8e4df;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact-section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-header h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.animate-in .contact-header h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.contact-info {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.animate-in .contact-info {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+
+.contact-divider {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.animate-in .contact-divider {
+    opacity: 1;
+    transform: scaleY(1);
+    transition-delay: 0.6s;
+}
+
+.education-box {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.animate-in .education-box {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.8s;
+}
+
+/* Footer Scroll Animations */
+footer {
+    background: #2a2a2a;
+    color: #ccc;
+    padding: 4rem 5% 2rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+footer.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+footer.animate-in .footer-left {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+.footer-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+footer.animate-in .footer-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
+
+.footer-bottom {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+footer.animate-in .footer-bottom {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
 
 /* Category Tabs */
 .category-tabs {
@@ -130,6 +382,9 @@ nav {
     background: white;
     padding: 2rem 0;
     border-bottom: 1px solid #e0e0e0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 1.4s both;
 }
 
 .tab {
@@ -143,7 +398,16 @@ nav {
     cursor: pointer;
     transition: all 0.3s;
     border-right: 1px solid #e0e0e0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out both;
 }
+
+.tab:nth-child(1) { animation-delay: 1.6s; }
+.tab:nth-child(2) { animation-delay: 1.7s; }
+.tab:nth-child(3) { animation-delay: 1.8s; }
+.tab:nth-child(4) { animation-delay: 1.9s; }
+.tab:nth-child(5) { animation-delay: 2s; }
 
 .tab:last-child {
     border-right: none;
@@ -152,6 +416,7 @@ nav {
 .tab:hover {
     color: #8b7355;
     background: #fafafa;
+    transform: translateY(-3px);
 }
 
 /* Services Section */
@@ -188,7 +453,7 @@ nav {
     position: relative;
     overflow: hidden;
     min-height: 400px;
-    padding: 4rem; 
+    padding: 0.5rem;
 }
 
 .service-img {
@@ -198,12 +463,13 @@ nav {
     object-fit: contain;
     object-position: center center;
     border: 5px solid black;
-    padding: 1rem;
+    padding: 0.5rem;
     background: white;
-    transition: transform 0.3s ease, box-shadow 0.8s ease;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
+
 .service-img:hover {
-    transform: scale(1.15); 
+    transform: scale(1.05); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
 }
 
@@ -218,16 +484,20 @@ nav {
 .service-label {
     position: absolute;
     right: 0;
-    top: 60%; 
+    top: 50%;
     transform: translateY(-50%) rotate(90deg);
     transform-origin: right center;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
     color: #8b7355;
     text-transform: uppercase;
 }
+
 .service-card:nth-child(even) .service-label {
-    transform: none;
+    right: auto;
+    left: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left center;
 }
 
 .service-content h2 {
@@ -236,12 +506,29 @@ nav {
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.service-content h2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .service-content p {
     color: #666;
     margin-bottom: 2rem;
     line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.service-content p.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
 }
 
 .service-content h3 {
@@ -250,17 +537,38 @@ nav {
     margin-bottom: 1rem;
     text-transform: uppercase;
     color: #8b7355;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.service-content h3.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
 }
 
 .service-content ul {
     list-style: none;
     color: #666;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.service-content ul.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.2s;
 }
 
 .service-content li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .service-content li::before {
@@ -269,6 +577,16 @@ nav {
     left: 0;
     color: #8b7355;
 }
+
+.service-content ul.animate-in li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.service-content ul.animate-in li:nth-child(1) { transition-delay: 1.4s; }
+.service-content ul.animate-in li:nth-child(2) { transition-delay: 1.6s; }
+.service-content ul.animate-in li:nth-child(3) { transition-delay: 1.8s; }
+.service-content ul.animate-in li:nth-child(4) { transition-delay: 2s; }
 
 /* CTA Section */
 .cta-section {
@@ -340,6 +658,30 @@ nav {
 .contact-section {
     padding: 5rem 5%;
     background: #e8e4df;
+}
+
+.contact-btn.sticky-contact {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.contact-btn.sticky-contact.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.contact-btn.sticky-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
 }
 
 .contact-header {
@@ -424,12 +766,19 @@ nav {
     border-right: 2px solid transparent;
     white-space: nowrap;
     width: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.contact-section.animate-in .animated-tagline {
+    opacity: 1;
+    transition-delay: 2.5s; 
 }
 
 .animated-tagline.typing {
-    animation: typing 3.5s steps(40) 0.3s 1 normal forwards,
-               blink 0.75s step-end 0s 5,
-               removeCursor 0.1s 4.5s forwards;
+    animation: typing 3.5s steps(40) 2.8s 1 normal forwards, 
+               blink 0.75s step-end 2.8s 5, 
+               removeCursor 0.1s 7.3s forwards;
 }
 
 @keyframes typing {
@@ -651,6 +1000,44 @@ footer {
 .footer-bottom p {
     color: #777;
     font-size: 0.85rem;
+}
+
+/* Scroll to Top Container - under Connect links */
+.scroll-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.scroll-to-top {
+    width: 45px;
+    height: 45px;
+    background: #8b7355;
+    border: 2px solid #8b7355;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-top:hover {
+    background: transparent;
+    color: #8b7355;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+.scroll-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover i {
+    transform: translateY(-3px);
 }
 
 /* Responsive */

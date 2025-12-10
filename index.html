@@ -36,34 +36,37 @@
 
     <div class="category-tabs">
         <button class="tab">PROJECT EXPERIENCE</button>
-        <button class="tab" onclick="window.open('https://nueraflow2.vercel.app/', '_blank')">NEURAFLOW</button>
+        <button class="tab" onclick="window.open('https://paige-internship-fawn.vercel.app/', '_blank')">NFT</button>
         <button class="tab" onclick="window.open('https://skinstric-red.vercel.app/', '_blank')">SKINSTRIC AI</button>
+        <button class="tab" onclick="window.open('https://nueraflow2.vercel.app/', '_blank')">NEURAFLOW</button>
         <button class="tab" onclick="window.open('https://stay-mori-collection02.vercel.app/', '_blank')">STAYMORI</button>
-        <button class="tab" onclick="document.getElementById('nft-section').scrollIntoView({ behavior: 'smooth', block: 'center' })">NFT</button>
         <button class="tab" onclick="window.open('https://netflix-clone-henna-nine-93.vercel.app/', '_blank')">NETFLIX CLONE</button>
     </div>
 
     <section class="services">
-         <a href="https://nueraflow2.vercel.app/" target="_blank" class="service-card-link">
+        <a id="nft-section">
             <div class="service-card">
                 <div class="service-image">
-                    <img src="assets/nueraflow.jpeg" alt="NeuraFlow Platform" class="service-img">
+                    <img src="./assets/nft.jpeg" alt="" class="service-img">
                 </div>
                 <div class="service-content">
-                    <div class="service-label">AI-POWERED PRODUCTIVITY</div>
-                    <h2>NEURAFLOW</h2>
-                    <p>An intelligent productivity platform leveraging AI to streamline workflows and enhance task management. Built with React and modern web technologies, featuring intuitive interfaces and smart automation capabilities for optimized productivity.</p>
+                    <div class="service-label">HOME AWAY FROM HOME</div>
+                    <h2>NFT Virtual Internship •
+                        <a href="https://github.com/pmaggio15/paige-internship" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                    </h2>
+                    <p>A professional virtual internship focused on building authenticated dashboards, real-time UI components, and production-quality frontend systems.</p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Developed an AI-powered productivity platform using React and modern JavaScript.</li>
-                        <li>Implemented intelligent task management and workflow automation features.</li>
-                        <li>Created responsive and intuitive user interfaces for seamless interaction.</li>
-                        <li>Integrated smart features to enhance user productivity and efficiency.</li>
+                        <li>Built modular dashboard components with role-based access and secure authentication.</li>
+                        <li>Implemented React Testing Library for UI validation, integrating mocks, test utilities, and snapshot testing,.</li>
+                        <li>Developed responsive layouts, reusable UI primitives, and clean component architecture for scalable feature expansion.</li>
+                        <li>Collaborated in sprint-based Git workflows, performing PR reviews, feature branches, and weekly deliverables.</li>
                     </ul>
                 </div>
             </div>
         </a>
-
 
         <a href="https://skinstric-red.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
@@ -72,7 +75,11 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">CHANGING SKINCARE</div>
-                    <h2>SKINSTRIC AI</h2>
+                    <h2>SKINSTRIC AI •
+                       <a href="https://github.com/pmaggio15/skinstric" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                    </h2>
                     <p>Frontend / AI Engineering Intern at Skinstric AI on a real-time skincare analysis platform built with Next.js and the OpenAI Vision API, achieving 98% detection accuracy. Built a responsive, animation-driven UI with Tailwind CSS and GSAP, boosting engagement by 60% and retention by 40%, while optimizing performance to sub-2-second analysis times.</p>
                     <h3>What's Included</h3>
                     <ul>
@@ -85,6 +92,30 @@
             </div>
         </a>
 
+        <a href="https://nueraflow2.vercel.app/" target="_blank" class="service-card-link">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="assets/nueraflow.jpeg" alt="NeuraFlow Platform" class="service-img">
+                </div>
+                <div class="service-content">
+                    <div class="service-label">AI-POWERED PRODUCTIVITY</div>
+                    <h2>NEURAFLOW •
+                        <a href="https://github.com/pmaggio15/NueraFlow" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </h2>
+                    <p>An intelligent productivity platform leveraging AI to streamline workflows and enhance task management. Built with React and modern web technologies, featuring intuitive interfaces and smart automation capabilities for optimized productivity.</p>
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Developed an AI-powered productivity platform using React and modern JavaScript.</li>
+                        <li>Implemented intelligent task management and workflow automation features.</li>
+                        <li>Created responsive and intuitive user interfaces for seamless interaction.</li>
+                        <li>Integrated smart features to enhance user productivity and efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+
         <a href="https://stay-mori-collection02.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
                 <div class="service-image">
@@ -92,7 +123,11 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">HOME AWAY FROM HOME</div>
-                    <h2>STAYMORI</h2>
+                    <h2>STAYMORI •
+                        <a href="https://github.com/pmaggio15/StayMori-Collection2" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                    </h2>
                     <p>A modern vacation rental platform built with React, TypeScript, and Firebase, offering seamless property browsing and booking experiences. Implemented responsive design with Tailwind CSS and integrated real-time data management for property listings and user interactions.</p>
                     <h3>What's Included</h3>
                     <ul>
@@ -100,26 +135,6 @@
                         <li>Created responsive UI components with Tailwind CSS for optimal viewing across devices.</li>
                         <li>Implemented real-time database integration for property listings and booking management.</li>
                         <li>Built intuitive search and filtering functionality for enhanced user experience.</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-
-         <a id="nft-section">
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="./assets/nft.jpeg" alt="" class="service-img">
-                </div>
-                <div class="service-content">
-                    <div class="service-label">HOME AWAY FROM HOME</div>
-                    <h2>NFT Virtual Internship</h2>
-                    <p>A professional virtual internship focused on building authenticated dashboards, real-time UI components, and production-quality frontend systems.</p>
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Built modular dashboard components with role-based access and secure authentication.</li>
-                        <li>Implemented React Testing Library for UI validation, integrating mocks, test utilities, and snapshot testing,.</li>
-                        <li>Developed responsive layouts, reusable UI primitives, and clean component architecture for scalable feature expansion.</li>
-                        <li>Collaborated in sprint-based Git workflows, performing PR reviews, feature branches, and weekly deliverables.</li>
                     </ul>
                 </div>
             </div>
@@ -132,7 +147,11 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">STREAMING REIMAGINED</div>
-                    <h2>NETFLIX CLONE</h2>
+                    <h2>NETFLIX CLONE •
+                        <a href="https://github.com/pmaggio15/Netflix-Clone" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                    </h2>
                     <p>A comprehensive streaming platform clone built with React and Firebase, featuring user authentication, dynamic content browsing, and personalized recommendations. Enhanced beyond the original Netflix interface with additional features including custom user profiles, advanced search capabilities, and interactive UI elements.</p>
                     <h3>What's Included</h3>
                     <ul>
@@ -286,6 +305,11 @@
             <div class="footer-left">
                 <div class="logo">| PAIGE MAGGIO |</div>
                 <p>Frontend Developer focused on building clean, scalable, and user-focused web applications, actively seeking frontend and full-stack opportunities.</p>
+                
+                <p class="footer-cta">
+                    Let’s build something incredible • 
+                    <a href="mailto:pmaggio15@gmail.com">pmaggio15@gmail.com</a>
+                </p>
             </div>
             <div class="footer-right">
                 <h3>CONNECT HERE</h3>

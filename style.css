@@ -972,6 +972,26 @@ footer {
     text-align: center;
 }
 
+.footer-cta {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #c6b39a;
+    letter-spacing: 0.06rem;
+}
+
+.footer-cta a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-weight: 500;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.footer-cta a:hover {
+    color: #e0cfb9;
+    border-color: #e0cfb9;
+}
+
 .social-links {
     display: flex;
     flex-direction: row;
@@ -1056,6 +1076,8 @@ footer {
 .service-card-link .service-card {
     cursor: pointer;
 }
+
+
 
 /* ============================================
    RESPONSIVE DESIGN - MOBILE & TABLET
@@ -1872,5 +1894,57 @@ footer {
     
     .tab:hover {
         background: transparent;
+    }
+}
+/* Github Icons */
+
+.github-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .6rem;
+    color: rgba(0, 0, 0, 0.278);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.github-icon:hover {
+    color: #8b7355;
+    transform: scale(1.1);
+}
+
+.service-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .github-icon {
+        font-size: 1.2rem;
+        margin-left: 0.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .github-icon {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    
+    .service-content h2 {
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 }

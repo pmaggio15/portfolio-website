@@ -36,38 +36,14 @@
 
     <div class="category-tabs">
         <button class="tab">PROJECT EXPERIENCE</button>
-        <button class="tab" onclick="window.open('https://paige-internship-fawn.vercel.app/', '_blank')">NFT</button>
         <button class="tab" onclick="window.open('https://skinstric-red.vercel.app/', '_blank')">SKINSTRIC AI</button>
+        <button class="tab" onclick="window.open('https://paige-internship-fawn.vercel.app/', '_blank')">NFT</button>
         <button class="tab" onclick="window.open('https://nueraflow2.vercel.app/', '_blank')">NEURAFLOW</button>
         <button class="tab" onclick="window.open('https://stay-mori-collection02.vercel.app/', '_blank')">STAYMORI</button>
         <button class="tab" onclick="window.open('https://netflix-clone-henna-nine-93.vercel.app/', '_blank')">NETFLIX CLONE</button>
     </div>
 
     <section class="services">
-        <a id="nft-section">
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="./assets/nft.jpeg" alt="" class="service-img">
-                </div>
-                <div class="service-content">
-                    <div class="service-label">HOME AWAY FROM HOME</div>
-                    <h2>NFT Virtual Internship •
-                        <a href="https://github.com/pmaggio15/paige-internship" target="_blank" class="github-icon" onclick="event.stopPropagation()">
-                            <i class="fab fa-github"></i>
-                        </a> 
-                    </h2>
-                    <p>A professional virtual internship focused on building authenticated dashboards, real-time UI components, and production-quality frontend systems.</p>
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Built modular dashboard components with role-based access and secure authentication.</li>
-                        <li>Implemented React Testing Library for UI validation, integrating mocks, test utilities, and snapshot testing,.</li>
-                        <li>Developed responsive layouts, reusable UI primitives, and clean component architecture for scalable feature expansion.</li>
-                        <li>Collaborated in sprint-based Git workflows, performing PR reviews, feature branches, and weekly deliverables.</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-
         <a href="https://skinstric-red.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
                 <div class="service-image">
@@ -75,18 +51,49 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">CHANGING SKINCARE</div>
-                    <h2>SKINSTRIC AI •
+                    <h2>SKINSTRIC AI • AI Skin Analysis Platform • 
                        <a href="https://github.com/pmaggio15/skinstric" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
-                    <p>Frontend / AI Engineering Intern at Skinstric AI on a real-time skincare analysis platform built with Next.js and the OpenAI Vision API, achieving 98% detection accuracy. Built a responsive, animation-driven UI with Tailwind CSS and GSAP, boosting engagement by 60% and retention by 40%, while optimizing performance to sub-2-second analysis times.</p>
+                    <p>A real-world AI engineering project rebuilding the Skinstric platform from the ground up using React, Vite, TailwindCSS, GSAP, and the OpenAI Vision API. Delivered a production-grade, pixel-accurate redesign with real-time AI scanning, sub-2-second analysis
+                        results, and a high-polish animation-driven UI that increased engagement by 60%. 
+                    </p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Built a real-time AI skincare analysis platform using Next.js and OpenAI Vision API, achieving 98% detection accuracy.</li>
-                        <li>Developed a responsive React UI with Tailwind CSS and GSAP, increasing user engagement by 60%.</li>
-                        <li>Optimized performance with Next.js Server Components, delivering sub-2-second skin detection results.</li>
-                        <li>Designed a modular component system enabling rapid A/B testing of recommendation experiences.</li>
+                        <li>Rebuilt the full Skinstric AI platform from scratch using React, Vite, TailwindCSS, GSAP, and OpenAI Vision.</li>
+                        <li>Engineered a real-time AI scanning workflow capable of detecting skin attributes with 98% accuracy.</li>
+                        <li>Developed a modular, scalable component architecture for clean state management and rapid feature expansion.</li>
+                        <li>Designed a high-polish, animation-driven interface using GSAP timelines that improved perceived speed and user engagement by 60%.</li>
+                        <li>Optimized processing of large image inputs to achieve sub-2-second analysis time through batching, preloading, and state hydration.</li>
+                        <li>Delivered a fully responsive UI matching production-level design fidelity, interaction patterns, and accessibility best practices.</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://paige-internship-fawn.vercel.app/" target="_blank" class="service-card-link" id="nft-section">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="./assets/nft.jpeg" alt="" class="service-img">
+                </div>
+                <div class="service-content">
+                    <div class="service-label">HOME AWAY FROM HOME</div>
+                    <h2>NFT Virtual Internship • React Dashboard Engineering • 
+                        <a href="https://github.com/pmaggio15/paige-internship" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                    </h2>
+                    <p>A professional virtual internship extending a production-grade React dashboard with secure authentication, reusable UI systems, dynamic states, and real-world sprint workflows. Delivered features across role-based access, real-time UI interactions, and automated
+                        testing while working within Git-based engineering practices. 
+                    </p>
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Implemented secure routing, role-based access, and reusable layout patterns.</li>
+                        <li>Enhanced UI reliability with loaders, error boundaries, skeleton states, and async data flows.</li>
+                        <li>Integrated Firebase Auth + Firestore to support protected routes and structured user-level data.</li>
+                        <li>Added Jest + React Testing Library tests improving UI stability and catching regressions early.</li>
+                        <li>Collaborated in sprint cycles using Git branching, pull requests, and code reviews.</li>
                     </ul>
                 </div>
             </div>
@@ -99,18 +106,21 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">AI-POWERED PRODUCTIVITY</div>
-                    <h2>NEURAFLOW •
+                    <h2>NEURAFLOW • AI Productivity Platform • 
                         <a href="https://github.com/pmaggio15/NueraFlow" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
                         </a>
                     </h2>
-                    <p>An intelligent productivity platform leveraging AI to streamline workflows and enhance task management. Built with React and modern web technologies, featuring intuitive interfaces and smart automation capabilities for optimized productivity.</p>
+                    <p>NeuraFlow is an AI productivity platform built with React, TypeScript, and OpenAI workflows. It delivers real-time summarization, automated task extraction, and intelligent search, supported by smooth dashboards and a fast serverless backend optimized for sub-100ms
+                        performance. The app features a modular UI system for rapid iteration and consistent, scalable design.
+                    </p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Developed an AI-powered productivity platform using React and modern JavaScript.</li>
-                        <li>Implemented intelligent task management and workflow automation features.</li>
-                        <li>Created responsive and intuitive user interfaces for seamless interaction.</li>
-                        <li>Integrated smart features to enhance user productivity and efficiency.</li>
+                        <li>Built the platform with React, TypeScript, Vite, and OpenAI APIs.</li>
+                        <li>Developed responsive dashboards with clean data visualizations.</li>
+                        <li>Optimized serverless API routes on Vercel for sub-100ms response times.</li>
+                        <li>Architected a scalable, reusable UI component system.</li>
+                        <li>Integrated vector search + embeddings for smart recommendations.</li>
                     </ul>
                 </div>
             </div>
@@ -123,18 +133,19 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">HOME AWAY FROM HOME</div>
-                    <h2>STAYMORI •
+                    <h2>STAY MORI • Full-Stack Vacation Booking Platform •
                         <a href="https://github.com/pmaggio15/StayMori-Collection2" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
-                    <p>A modern vacation rental platform built with React, TypeScript, and Firebase, offering seamless property browsing and booking experiences. Implemented responsive design with Tailwind CSS and integrated real-time data management for property listings and user interactions.</p>
+                    <p>A full-stack hotel rental platform built using React, Next.js, Node/Express, MongoDB, Clerk authentication, and Stripe. Developed real-time availability filtering, dynamic pricing behavior, and concurrency-safe booking operations to prevent double-bookings.
+                        Delivered a modern, responsive UI with TailwindCSS and fast property search powered by indexed MongoDB schemas.</p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Developed a full-stack vacation rental platform using React, TypeScript, and Firebase.</li>
-                        <li>Created responsive UI components with Tailwind CSS for optimal viewing across devices.</li>
-                        <li>Implemented real-time database integration for property listings and booking management.</li>
-                        <li>Built intuitive search and filtering functionality for enhanced user experience.</li>
+                        <li>Built the full Stay Mori booking platform using React, Next.js, Node.js/Express, MongoDB, Clerk auth, and Stripe payments.</li>
+                        <li>Engineered real-time availability filtering, date-safe booking logic, and dynamic pricing calculations.</li>
+                        <li>Designed an elegant, responsive UI with TailwindCSS and interactive components for smoother browsing and higher booking conversion.</li>
+                        <li>Created optimized MongoDB schemas and indexed search queries for fast property lookups and reliable reservation workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -147,78 +158,27 @@
                 </div>
                 <div class="service-content">
                     <div class="service-label">STREAMING REIMAGINED</div>
-                    <h2>NETFLIX CLONE •
+                    <h2>NETFLIX CLONE • Streaming Platform Engineering •
                         <a href="https://github.com/pmaggio15/Netflix-Clone" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
-                    <p>A comprehensive streaming platform clone built with React and Firebase, featuring user authentication, dynamic content browsing, and personalized recommendations. Enhanced beyond the original Netflix interface with additional features including custom user profiles, advanced search capabilities, and interactive UI elements.</p>
+                    <p>A feature-rich streaming platform built with React and Firebase, implementing user authentication, multi-profile support, dynamic content browsing, and real-time personalized recommendations. Designed with smooth transitions, skeleton loaders, and intuitive
+                        navigation to deliver a fast, native-feeling streaming experience. 
+                    </p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Built a full-featured streaming platform using React and Firebase authentication.</li>
-                        <li>Implemented dynamic content browsing with real-time database integration.</li>
-                        <li>Enhanced with custom features beyond Netflix including advanced search and filtering.</li>
-                        <li>Created responsive design with smooth animations and intuitive navigation.</li>
+                        <li>Developed a full-featured streaming platform using React, Firebase Authentication, and Firestore.</li>
+                        <li>Implemented dynamic content browsing with real-time category filtering, search, and personalized recommendations.</li>
+                        <li>Added enhanced features beyond the original Netflix UI, including multi-profile support and user-specific watchlists.</li>
+                        <li>Built a responsive, mobile-first interface with optimized rendering, smooth page transitions, and skeleton loading states.</li>
                     </ul>
                 </div>
             </div>
         </a>
     </section>
 
-    <section class="cta-section">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <div class="skill-columns">
-                    <ul>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>TypeScript</li>
-                        <li>JavaScript</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <ul>
-                        <li>CSS3</li>
-                        <li>Tailwind CSS</li>
-                        <li>Material UI</li>
-                        <li>Styled Components</li>
-                        <li>Vue</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Backend & Database</h3>
-                <div class="skill-columns">
-                    <ul>
-                        <li>Node.js</li>
-                        <li>NestJS</li>
-                        <li>C#</li>
-                        <li>REST APIs</li>
-                    </ul>
-                    <ul>
-                        <li>GraphQL</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Cloud & DevOps</h3>
-                <div class="skill-columns">
-                    <ul>
-                        <li>Vercel</li>
-                    </ul>
-                    <ul>
-                        <li>GitHub Actions</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="contact-section" id="contact">
         <div class="contact-header">

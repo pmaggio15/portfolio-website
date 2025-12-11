@@ -502,7 +502,7 @@ footer.animate-in .footer-bottom {
 }
 
 .service-content h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;
@@ -1919,7 +1919,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;

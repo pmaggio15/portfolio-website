@@ -194,11 +194,12 @@ nav {
     height: 48px;
     width: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 .hero .skills-row img:hover {
     transform: translateY(-10px) scale(1.1);
     filter: drop-shadow(0 10px 20px rgba(139, 115, 85, 0.3));
+    
 }
 
 /* Mobile responsive for hero skills */

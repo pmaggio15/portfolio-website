@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Paige Maggio | Frontend Engineer | </title>
+    <title> Paige Maggio | Frontend Engineer </title>
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -43,39 +43,13 @@
 
     <div class="category-tabs">
         <button class="tab">PROJECT EXPERIENCE</button>
-        <button class="tab" onclick="window.open('https://nueraflow2.vercel.app/', '_blank')">NUERAFLOW</button>
         <button class="tab" onclick="window.open('https://skinstric-red.vercel.app/', '_blank')">SKINSTRIC AI</button>
-        <button class="tab" onclick="window.open('https://paige-internship-fawn.vercel.app/', '_blank')">NFT</button>
+        <button class="tab" onclick="window.open('https://nueraflow2.vercel.app/', '_blank')">NUERAFLOW</button>
         <button class="tab" onclick="window.open('https://stay-mori-collection02.vercel.app/', '_blank')">STAYMORI</button>
-        <button class="tab" onclick="window.open('https://netflix-clone-henna-nine-93.vercel.app/', '_blank')">STREAMFLIX</button>
+        <button class="tab" onclick="window.open('https://paige-internship-fawn.vercel.app/', '_blank')">NFT</button>
     </div>
 
     <section class="services">
-          <a href="https://nueraflow2.vercel.app/" target="_blank" class="service-card-link">
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="assets/nueraflow.jpeg" alt="NeuraFlow Platform" class="service-img">
-                </div>
-                <div class="service-content">
-                    <div class="service-label">AI-POWERED PRODUCTIVITY</div>
-                    <h2>NUERAFLOW • AI Productivity Platform
-                        <a href="https://github.com/pmaggio15/NueraFlow" target="_blank" class="github-icon" onclick="event.stopPropagation()">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </h2>
-                    <p>Designed and built a full-stack AI productivity platform focused on real-time summarization, task extraction, and intelligent search workflows.</p>
-                    <h3>What's Included</h3>
-                    <ul>
-                        <li>Built the platform using React and TypeScript, implementing end-to-end AI workflows for summarization and task extraction.</li>
-                        <li>Developed AI-driven dashboards with clear data visualization to reduce manual work and improve task tracking.</li>
-                        <li>Implemented a serverless backend on Vercel, optimizing API routes and edge functions to achieve sub-100ms response times.</li>
-                        <li>Architected a scalable, reusable UI system with predictable data flow and consistent styling.</li>
-                        <li>Integrated OpenAI APIs with embeddings and vector search to enable contextual lookup and smart recommendations.</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-
         <a href="https://skinstric-red.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
                 <div class="service-image">
@@ -88,11 +62,12 @@
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
+                    <p class="tech-stack">React • Next.js • TypeScript • Tailwind CSS • GSAP</p>
                     <p>Rebuilt an AI-powered skin analysis platform from the ground up, delivering a production-grade, high-polish user experience with real-time AI workflows and performance-focused frontend architecture.</p>
                     <h3>What's Included</h3>
                     <ul>
                         <li>Rebuilt the platform end-to-end using React, TypeScript, Vite, TailwindCSS, and GSAP with pixel-accurate design fidelity.</li>
-                        <li>Engineered a real-time AI image analysis workflow using OpenAI Vision to detect and explain skin attributes with high accuracy.</li>
+                        <li>Implemented real time image upload and analysis workflows by integrating third party skin analysis APIs and managing asynchronous UI states.</li>
                         <li>Architected a modular, scalable component system enabling clean state management and rapid feature expansion.</li>
                         <li>Designed animation-driven UI flows with GSAP timelines to improve perceived responsiveness and user engagement.</li>
                         <li>Optimized performance across image-heavy workflows, achieving sub-2-second analysis times through batching, preloading, and intelligent state hydration.</li>
@@ -102,26 +77,27 @@
             </div>
         </a>
 
-        <a href="https://paige-internship-fawn.vercel.app/" target="_blank" class="service-card-link" id="nft-section">
+        <a href="https://nueraflow2.vercel.app/" target="_blank" class="service-card-link">
             <div class="service-card">
                 <div class="service-image">
-                    <img src="./assets/nft.jpeg" alt="" class="service-img">
+                    <img src="assets/nueraflow.jpeg" alt="NeuraFlow Platform" class="service-img">
                 </div>
                 <div class="service-content">
-                    <div class="service-label">HOME AWAY FROM HOME</div>
-                    <h2>NFT Analytics Dashboard • Engineering Internship 
-                        <a href="https://github.com/pmaggio15/paige-internship" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                    <div class="service-label">AI-POWERED PRODUCTIVITY</div>
+                    <h2>NUERAFLOW • AI Productivity Platform
+                        <a href="https://github.com/pmaggio15/NueraFlow" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
-                        </a> 
+                        </a>
                     </h2>
-                    <p>Extended a production-style React analytics dashboard as part of a virtual engineering internship, working within real sprint cycles and code review processes.</p>
+                     <p class="tech-stack">React • TypeScript • OpenAI API • Vercel • PostgreSQL • Node.js</p>
+                    <p>Designed and built a full-stack AI productivity platform focused on real-time summarization, task extraction, and intelligent search workflows.</p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Extended an existing React dashboard with secure routing, reusable layouts, and multi-role user interfaces.</li>
-                        <li>Implemented dynamic UI states including loading skeletons, error boundaries, and async data flows.</li>
-                        <li>Integrated Firebase Authentication and Firestore for protected routes and real-time data updates.</li>
-                        <li>Wrote component and integration tests using Jest and React Testing Library.</li>
-                        <li>Collaborated in Git-based sprint cycles using pull requests and code reviews.</li>
+                        <li>Built the platform using React and TypeScript, implementing end-to-end AI workflows for summarization and task extraction.</li>
+                        <li>Developed AI-driven dashboards with clear data visualization to reduce manual work and improve task tracking.</li>
+                        <li>Implemented a serverless backend on Vercel, optimizing API routes and edge functions to achieve sub-100ms response times.</li>
+                        <li>Architected a scalable, reusable UI system with predictable data flow and consistent styling.</li>
+                        <li>Integrated OpenAI APIs with embeddings and vector search to enable contextual lookup and smart recommendations.</li>
                     </ul>
                 </div>
             </div>
@@ -139,6 +115,7 @@
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
+                    <p class="tech-stack">React • Next.js • Node.js • MongoDB • Stripe • Tailwind CSS</p>
                     <p>Built a full-stack vacation rental platform with real-time availability, secure payments, and responsive UI.</p>
                     <h3>What's Included</h3>
                     <ul>
@@ -150,25 +127,28 @@
                 </div>
             </div>
         </a>
-        
-       <a href="https://netflix-clone-henna-nine-93.vercel.app/" target="_blank" class="service-card-link">
+
+        <a href="https://paige-internship-fawn.vercel.app/" target="_blank" class="service-card-link" id="nft-section">
             <div class="service-card">
                 <div class="service-image">
-                    <img src="assets/netflixclone.jpeg" alt="Netflix Clone Platform" class="service-img">
+                    <img src="./assets/nft.jpeg" alt="NFT Analytics Dashboard" class="service-img">
                 </div>
                 <div class="service-content">
-                    <div class="service-label">STREAMING REIMAGINED</div>
-                    <h2>STREAMFLIX • Streaming Platform UI
-                        <a href="https://github.com/pmaggio15/Netflix-Clone" target="_blank" class="github-icon" onclick="event.stopPropagation()">
+                    <div class="service-label">A new kind of forever</div>
+                    <h2>NFT Analytics Dashboard • Engineering Internship 
+                        <a href="https://github.com/pmaggio15/paige-internship" target="_blank" class="github-icon" onclick="event.stopPropagation()">
                             <i class="fab fa-github"></i>
                         </a> 
                     </h2>
-                    <p>Built a streaming platform UI inspired by Netflix, focusing on layout accuracy, responsiveness, and API-driven content. </p>
+                    <p class="tech-stack">React • Firebase • Firestore • Jest • React Testing </p>
+                    <p>Extended a production-style React analytics dashboard as part of a virtual engineering internship, working within real sprint cycles and code review processes.</p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Implemented a responsive streaming interface using React and external APIs. </li>
-                        <li>Built dynamic category filtering and media preview components.</li>
-                        <li>Focused on component reuse, layout fidelity, and mobile responsiveness.</li>
+                        <li>Extended an existing React dashboard with secure routing, reusable layouts, and multi-role user interfaces.</li>
+                        <li>Implemented dynamic UI states including loading skeletons, error boundaries, and async data flows.</li>
+                        <li>Integrated Firebase Authentication and Firestore for protected routes and real-time data updates.</li>
+                        <li>Wrote component and integration tests using Jest and React Testing Library.</li>
+                        <li>Collaborated in Git-based sprint cycles using pull requests and code reviews.</li>
                     </ul>
                 </div>
             </div>
@@ -277,91 +257,96 @@
     </footer>
     
   <script>
-        const tagline = document.querySelector('.animated-tagline');
-        
-        const observerOptions = {
-            threshold: 0.7,
-            rootMargin: '0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    tagline.classList.remove('typing');
-                    void tagline.offsetWidth;
-                    tagline.classList.add('typing');
-                } else {
-                    tagline.classList.remove('typing');
-                }
-            });
-        }, observerOptions);
-        
-        if (tagline) {
-            observer.observe(tagline);
-        }
-
-        const stickyButton = document.querySelector('.sticky-contact');
-        const heroSection = document.querySelector('.hero');
-        const contactSection = document.querySelector('.contact-section');
-        
-        window.addEventListener('scroll', () => {
-            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            const contactTop = contactSection.offsetTop;
-            const scrollPosition = window.scrollY;
-            
-            if (scrollPosition > heroBottom && scrollPosition < contactTop) {
-                stickyButton.classList.add('show');
+    const tagline = document.querySelector('.animated-tagline');
+    
+    const observerOptions = {
+        threshold: 0.7,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tagline.classList.remove('typing');
+                void tagline.offsetWidth;
+                tagline.classList.add('typing');
             } else {
-                stickyButton.classList.remove('show');
+                tagline.classList.remove('typing');
             }
         });
+    }, observerOptions);
+    
+    if (tagline) {
+        observer.observe(tagline);
+    }
 
+    const stickyButton = document.querySelector('.sticky-contact');
+    const heroSection = document.querySelector('.hero');
+    const contactSection = document.querySelector('.contact-section');
+    
+    window.addEventListener('scroll', () => {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        const contactTop = contactSection.offsetTop;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > heroBottom && scrollPosition < contactTop) {
+            stickyButton.classList.add('show');
+        } else {
+            stickyButton.classList.remove('show');
+        }
+    });
+
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    const serviceObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const content = entry.target.querySelector('.service-content');
+                
       
-        const serviceCards = document.querySelectorAll('.service-card');
-
-        const serviceObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const h2 = entry.target.querySelector('.service-content h2');
-                    const p = entry.target.querySelector('.service-content p');
-                    const h3 = entry.target.querySelector('.service-content h3');
-                    const ul = entry.target.querySelector('.service-content ul');
-                    
-                    setTimeout(() => {
-                        if (h2) h2.classList.add('animate-in');
-                        if (p) p.classList.add('animate-in');
-                        if (h3) h3.classList.add('animate-in');
-                        if (ul) ul.classList.add('animate-in');
-                    }, 100);
-                }
-            });
-        }, {
-            threshold: 0.7,
-            rootMargin: '0px'
+                const h2 = content.querySelector('h2');
+                const techStack = content.querySelector('.tech-stack');
+                const paragraphs = content.querySelectorAll('p:not(.tech-stack)');
+                const description = paragraphs[0]; 
+                const h3 = content.querySelector('h3');
+                const ul = content.querySelector('ul');
+                
+                setTimeout(() => {
+                    if (h2) h2.classList.add('animate-in');
+                    if (techStack) techStack.classList.add('animate-in');
+                    if (description) description.classList.add('animate-in');
+                    if (h3) h3.classList.add('animate-in');
+                    if (ul) ul.classList.add('animate-in');
+                }, 100);
+            }
         });
+    }, {
+        threshold: 0.5, 
+        rootMargin: '0px'
+    });
 
-        serviceCards.forEach(card => {
-            serviceObserver.observe(card);
+    serviceCards.forEach(card => {
+        serviceObserver.observe(card);
+    });
+
+    
+    const ctaSection = document.querySelector('.cta-section');
+    const footer = document.querySelector('footer');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
         });
+    }, {
+        threshold: 0.6,
+        rootMargin: '0px'
+    });
 
-       
-        const ctaSection = document.querySelector('.cta-section');
-        const footer = document.querySelector('footer');
-
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, {
-            threshold: 0.6,
-            rootMargin: '0px'
-        });
-
-        if (ctaSection) sectionObserver.observe(ctaSection);
-        if (contactSection) sectionObserver.observe(contactSection);
-        if (footer) sectionObserver.observe(footer);
-    </script>
+    if (ctaSection) sectionObserver.observe(ctaSection);
+    if (contactSection) sectionObserver.observe(contactSection);
+    if (footer) sectionObserver.observe(footer);
+</script>
 </body>
 </html>

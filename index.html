@@ -63,15 +63,19 @@
                         </a> 
                     </h2>
                     <p class="tech-stack">React • Next.js • TypeScript • Tailwind CSS • GSAP</p>
-                    <p>Rebuilt an AI-powered skin analysis platform from the ground up, delivering a production-grade, high-polish user experience with real-time AI workflows and performance-focused frontend architecture.</p>
+                    <p>Rebuilt a production style frontend demo for an AI skin analysis platform, delivering a high polish user experience with real time image workflows and performancefocused frontend architecture.</p>
+                    <p class="project-disclaimer">
+                        <em>
+                            This repository demonstrates the frontend architecture and user experience of the Skinstric platform. 
+                            Production skin-analysis models and backend services are private and not included.
+                        </em>
+                    </p>
                     <h3>What's Included</h3>
                     <ul>
-                        <li>Rebuilt the platform end-to-end using React, TypeScript, Vite, TailwindCSS, and GSAP with pixel-accurate design fidelity.</li>
-                        <li>Implemented real time image upload and analysis workflows by integrating third party skin analysis APIs and managing asynchronous UI states.</li>
-                        <li>Architected a modular, scalable component system enabling clean state management and rapid feature expansion.</li>
-                        <li>Designed animation-driven UI flows with GSAP timelines to improve perceived responsiveness and user engagement.</li>
-                        <li>Optimized performance across image-heavy workflows, achieving sub-2-second analysis times through batching, preloading, and intelligent state hydration.</li>
-                        <li>Delivered a fully responsive, accessible interface with production-level interaction patterns. </li>
+                        <li>Implemented a production style frontend demo that mirrors the live platform’s user flow from image capture through analysis states, aligned with a private skin analysis API contract.</li>
+                        <li>Built real time image capture and upload workflows with robust asynchronous state management and clear loading, processing, and error states.</li>
+                        <li>Engineered a modular, scalable component system using React, TypeScript, and Tailwind CSS to support rapid UI iteration and consistent design patterns.</li>
+                        <li>Designed animation driven user flows with GSAP timelines to improve perceived performance and guide users through multi step analysis experiences.</li>
                     </ul>
                 </div>
             </div>
@@ -302,19 +306,16 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const content = entry.target.querySelector('.service-content');
-                
-      
                 const h2 = content.querySelector('h2');
                 const techStack = content.querySelector('.tech-stack');
                 const paragraphs = content.querySelectorAll('p:not(.tech-stack)');
-                const description = paragraphs[0]; 
                 const h3 = content.querySelector('h3');
                 const ul = content.querySelector('ul');
                 
                 setTimeout(() => {
                     if (h2) h2.classList.add('animate-in');
                     if (techStack) techStack.classList.add('animate-in');
-                    if (description) description.classList.add('animate-in');
+                    paragraphs.forEach(p => p.classList.add('animate-in'));
                     if (h3) h3.classList.add('animate-in');
                     if (ul) ul.classList.add('animate-in');
                 }, 100);

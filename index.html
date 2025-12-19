@@ -280,27 +280,27 @@
     
   <script>
     const tagline = document.querySelector('.animated-tagline');
-    
+    const isMobile = window.innerWidth <= 768;
+    const delay = isMobile ? 1000 : 200;
+
     const observerOptions = {
-        threshold: 0.7,
-        rootMargin: '0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                tagline.classList.remove('typing');
-                void tagline.offsetWidth;
+    threshold: 0.2, 
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !tagline.classList.contains('typing')) {
+            setTimeout(() => {
                 tagline.classList.add('typing');
-            } else {
-                tagline.classList.remove('typing');
-            }
-        });
-    }, observerOptions);
-    
-    if (tagline) {
-        observer.observe(tagline);
-    }
+            }, 200);
+        }
+    });
+}, observerOptions);
+
+if (tagline) {
+    observer.observe(tagline);
+}
 
     const stickyButton = document.querySelector('.sticky-contact');
     const heroSection = document.querySelector('.hero');
@@ -359,7 +359,7 @@
             }
         });
     }, {
-        threshold: 0.6,
+        threshold: 0.3,
         rootMargin: '0px'
     });
 

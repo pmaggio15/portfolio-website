@@ -1579,14 +1579,9 @@ footer.animate-in .footer-bottom {
         font-size: 1.2rem;
     }
 
-    .animated-tagline {
-        font-size: 0.75rem;
-        line-height: 1.5;
-        white-space: normal;
-        animation: none !important;
-        border-right: none !important;
-        width: 100%;
-    }
+   .animated-tagline{
+    display: none;
+   }
 
     .education-item h3 {
         font-size: 0.8rem;

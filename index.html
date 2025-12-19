@@ -9,17 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <nav>
+    <nav class="site-nav">
         <div class="logo">| PAIGE MAGGIO |</div>
-        <ul class="nav-links">
+        <ul class="nav-links nav-links--desktop">
             <li><a href="#home">HOME</a></li>
             <li><a href="mailto:pmaggio15@gmail.com">CONTACT</a></li>
-            <li><a href="https://linkedin.com/in/paigemaggio" target="_blank">LINKEDIN</a></li>
-            <li><a href="https://github.com/pmaggio15" target="_blank">GITHUB</a></li>
-            <li><a href="./assets/Resume Paige Maggio.pdf" target="_blank">RESUME</a></li>
+            <li><a href="https://linkedin.com/in/paigemaggio" target="_blank" rel="noopener">LINKEDIN</a></li>
+            <li><a href="https://github.com/pmaggio15" target="_blank" rel="noopener">GITHUB</a></li>
+            <li><a href="./assets/Resume Paige Maggio.pdf" target="_blank" rel="noopener">RESUME</a></li>
         </ul>
-        <button class="contact-btn" onclick="window.location.href='mailto:pmaggio15@gmail.com'">CONTACT</button>
+        <button class="contact-btn contact-btn--desktop" onclick="window.location.href='mailto:pmaggio15@gmail.com'">
+            CONTACT
+        </button>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-overlay" data-nav-close></div>
+
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <ul class="nav-links nav-links--mobile">
+            <li><a data-nav-close href="#home">HOME</a></li>
+            <li><a data-nav-close href="mailto:pmaggio15@gmail.com">CONTACT</a></li>
+            <li><a data-nav-close href="https://linkedin.com/in/paigemaggio" target="_blank" rel="noopener">LINKEDIN</a></li>
+            <li><a data-nav-close href="https://github.com/pmaggio15" target="_blank" rel="noopener">GITHUB</a></li>
+            <li><a data-nav-close href="./assets/Resume Paige Maggio.pdf" target="_blank" rel="noopener">RESUME</a></li>
+            </ul>
+
+            <button class="contact-btn contact-btn--mobile" onclick="window.location.href='mailto:pmaggio15@gmail.com'">
+            CONTACT
+            </button>
+        </div>
     </nav>
+
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -159,8 +181,6 @@
         </a>
     </section>
 
-    
-
     <section class="contact-section" id="contact">
         <div class="contact-header">
             <h2>Let's explore opportunities <br />to work together</h2>
@@ -227,8 +247,6 @@
             </div>
         </div>
     </section>
-
-
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -348,6 +366,32 @@
     if (ctaSection) sectionObserver.observe(ctaSection);
     if (contactSection) sectionObserver.observe(contactSection);
     if (footer) sectionObserver.observe(footer);
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const overlay = document.querySelector(".nav-overlay");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    function setNavOpen(isOpen) {
+    document.body.classList.toggle("nav-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+    }
+
+    navToggle?.addEventListener("click", () => {
+    const isOpen = document.body.classList.contains("nav-open");
+    setNavOpen(!isOpen);
+    });
+
+    overlay?.addEventListener("click", () => setNavOpen(false));
+
+    document.querySelectorAll("[data-nav-close]").forEach((el) => {
+    el.addEventListener("click", () => setNavOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setNavOpen(false);
+    });
+
 </script>
 </body>
 </html>
